@@ -1,0 +1,13 @@
+server:
+  port: 8082
+spring:
+  redis:
+    host: yanzhenyidai.com
+    port: 6379
+    password: Baidu@2019
+  datasource:
+    url: jdbc:mysql://yanzhenyidai.com:3306/oauth2?useUnicode=true&characterEncoding=utf-8
+    username: oauth2
+    password: Oauth2@2019
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
