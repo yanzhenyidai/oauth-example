@@ -4,7 +4,7 @@ spring:
   redis:
     host: yanzhenyidai.com
     port: 6379
-    password: Baidu@2019
+    password: *** ## 如要测试redis请在本地安装
   datasource:
      url: jdbc:mysql://yanzhenyidai.com:3306/oauth2?useUnicode=true&characterEncoding=utf-8
      username: oauth2
