@@ -6,6 +6,7 @@ import com.yanzhenyidai.auth.mapper.SysRoleMapper;
 import com.yanzhenyidai.auth.mapper.SysUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author frank
@@ -38,6 +40,11 @@ public class UserServicesImpl implements UserDetailsService {
 
         Assert.notNull(sysUser, "用户信息不存在");
 
-        return new User(userName, sysUser.getPassword(), new HashSet<GrantedAuthority>());
+        GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_TEST");
+
+        Set<GrantedAuthority> authorities = new HashSet<>();
+        authorities.add(authority);
+
+        return new User(userName, sysUser.getPassword(), authorities);
     }
 }
