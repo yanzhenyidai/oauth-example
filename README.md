@@ -1,6 +1,9 @@
 
 # OAUTH-EXAMPLE
 
+
+[![Build Status](https://travis-ci.com/yanzhenyidai/oauth-example.svg?branch=master)](https://travis-ci.org/yanzhenyidai/oauth-example)
+
 > this project is sample example for oauth2, implements resource & authorize.
 
 ---
